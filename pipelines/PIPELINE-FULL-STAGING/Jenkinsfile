@@ -42,7 +42,7 @@ pipeline {
         stage('Integration Test after deploy'){
             steps{
                 script {
-                    def BASE_URL = "https://i0169k5q84.execute-api.us-east-1.amazonaws.com/Prod/todos"
+                    def BASE_URL = "https://caynvy8hzl.execute-api.us-east-1.amazonaws.com/Prod"
                         //sh( script: "aws cloudformation describe-stacks --stack-name todo-list-aws-staging --query 'Stacks[0].Outputs[?OutputKey==`BaseUrlApi`].OutputValue' --region us-east-1 --output text",
                         //returnStdout: true)
                     echo "$BASE_URL"
